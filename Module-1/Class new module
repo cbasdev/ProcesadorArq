@@ -1,0 +1,110 @@
+40 registros <-  tenemos por el momento 32
+
+
+El register file tiene que modificarse
+
+no va a ser de 32 registros sino un modulo de 40 registros
+
+pasan a tener 6 bits el rs1, rs2, rd
+
+NUEVO MODULO = WINDOWS MANAGER
+
+nrs1 <= rs1 + cwp * 16; -- cuando sean registros de salida: out, o locals
+nrs1 <= rs1 - cwp * 16; -- cuando sean registros de entrada:
+
+tambien aplican para nrs2, nrsd
+
+
+
+alguien debe haber en la mitad para coger los 5 bits
+---
+---
+---
+---
+ventanas en la arq sparc v8
+
+solo teniamos una ventana
+
+si adicionamos:
+
+
+los registros o de la ventana 0 son los registros i de la ventana 1
+---
+---
+PSR processor State Register
+en el psr hay un campo llamado CWP (current window pointer)
+
+
+este señor son los bits menos significativos del psr (si estoy en la ventana 1 y 0)
+---
+_________________________________
+| Registers | Window0 | Window1  |
+|________________________________|
+| g0 - g7   | r0 - r7 | r0 - r7  |
+| o0 - o7   | r8 - r15| r24 - r31|
+| l0 - l7   | r16 -r23| r32 - r39|
+| i0 - i7   | r24 -r31| r8 - r15 |
+|________________________________|
+
+---
+
+Nuevas instrucciones:
+Save- restore
+Save: Lee el cwp y le resta 1 y lo guarda en un nuevo cwp (es decir lo modifica)
+ncwp = cwp - 1
+restore: lee el cwp y le suma 1
+ncwp = cwp + 1
+
+---  //cambia el op3
+Syntaxis de ambas
+restore
+save rs1, rs2, rd
+---
+---
+PSR MODIFY
+
+tarea de almacenar los bits icc y de los 5 bits de icc solo necesito 1 carry que es nueva entrada de la alu
+pag 170
+
+solo modificar si la instruccion es cc
+
+en el psr modify voy a tener la necesidad de que a ese modulo le entren los valores:
+
+si deseo saber si el resultado es negativo debo mirar el bit mas significativo
+y se lo asigno al bit n del psr
+el bit z basicamente se pone en 1 si el resultado de la operacion fue 0
+sino se pone en 0
+
+v mira el bit mas significativo del operando 1 y el del operando 2 y mira si hay overflow,
+
+c se genera cando el bit mas significativo del rs1 es 1 y el bit mas significadovo del rs2 es 1,
+  cuando hay overflow se genera unc arry pero cuando hay un carry no se genera un overflow
+  
+  genero los bits n z v c
+  
+  me indica entonces que entradas debe tener mi psr modify
+  __________________________________________________________________________________________________
+  En los videos hay un errorstido de el calculo de las ventanas
+  
+  hay un error 
+  mal suma y se movio un bit
+  __________________________________________________________________________________________________
+  
+
+---
+
+LAS INSTRUCCIONES QUE TIENEN CC  adcc 
+tienen en cuenta el condicional coud
+
+las instrucciones que tienen Xcc ADDXCC
+tienen en cuenta el acarreo
+
+
+---
+
+
+PSR DEBE TENER CLOCK
+
+
+---
+

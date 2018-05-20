@@ -1,0 +1,69 @@
+LOAD Y STORE
+
+id[address],reg(rd)
+st reg()rd, [address]
+address <= crs1+crs2
+            
+           crs+sew(imm13)
+
+la instruccion que implementamos mueve 32 bits
+-------------
+el addres es calculado con una suma
+
+saca 32 bits y lo guarda en el register rd que le diga
+
+--------------
+
+el store va a la memmoria de datos calcula un address
+
+lo utiliza para almacenar alla el reg destino
+
+
+nueva señal para rd que a al dm
+---------------------
+
+load y store son instrucciones de formato 3
+11
+
+--------------------------------------------------------------------------------------------
+
+salto condicionado modifica el pc
+
+
+
+
+
+------------------------------------------
+CALL AND LINK
+
+FORMATO 1
+OP 01
+
+OP Y 30 bits que tiene los bits que voy a saltar
+
+guarda en el registro o7 el valor actual del program counter
+
+luego coge el pc y lo modifica
+
+pc <= pc + seu(disp(30))
+
+
+-----------------------------------------------
+
+
+jump and link
+
+
+Salto incondicional
+ejecuta delay slot
+
+pero el salto es absolutooooooooooo
+
+
+
+se prueba con una multiplicacion
+
+
+ 
+
+

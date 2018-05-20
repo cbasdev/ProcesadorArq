@@ -1,0 +1,33 @@
+procesador reconoce load and store
+
+permite trabajar con memeoria de datos, solo se almacena datos los accesos se hacen con 
+load y store (2 instrucciones que mueven 32bits cada una)
+
+adress <= saca 32 bits de la memoria de datos ese dato lo inyecta en el register file y lo mete en la memoria que yo indique
+store <= ir a la memoria d edatos calcula el adress como una suma igual en el load, ese adress lo utiliza para almacenar el registro destino
+      debo sacar el contendo registro destino
+      
+load y store son instrucciones formato 3 el op es 11 por que el calculo del adress es una suma
+
+==================================== UC ====================================
+sale un enable para el data memory
+señales permiten controlar escritura DM y RF o si carga una memoria de datos o deja pasar el alu
+un store no guarda en RF sino en el DM
+loAD HABILITA ESCRITURA EN EL rf Y NO EN EL 
+RDENMEM se quita
+
+
+
+================================ DATA memory ===================================
+cuando sea un load sale y va  al multiplexor
+memoria ram un puerto lectura y uno escritura
+se debe poner reset 
+hay que hacerla sincrona
+CRD dato que quiero guardar
+
+
+=================================== Register=====================
+Renable no guarde resgiter file si llega store pero guardeme en la memoria de datos en la prosicion RD que le mande REGrd
+
+
+================================ MUX =================================
