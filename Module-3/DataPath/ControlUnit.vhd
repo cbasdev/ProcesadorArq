@@ -3,8 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use IEEE.std_logic_unsigned.all;
 
-
-
+--- falta editar en rfdest
 entity ControUnit is
     Port ( ICC : in  STD_LOGIC_VECTOR (3 downto 0);
            OP3 : in  STD_LOGIC_VECTOR (5 downto 0);
