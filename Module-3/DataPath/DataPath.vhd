@@ -1,4 +1,4 @@
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -115,7 +115,7 @@ architecture Behavioral of DataPath is
       ALUOut : in  STD_LOGIC_VECTOR (5 downto 0);
       Result : in  STD_LOGIC_VECTOR (31 downto 0);
       NZVC : out  STD_LOGIC_VECTOR (3 downto 0)
-		);
+		);----
 		
 	END COMPONENT;
 	
