@@ -1,8 +1,10 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
-use IEEE.std_logic_unsigned.all;
 
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.std_logic_unsigned.all;
+use IEEE.STD_LOGIC_ARITH.ALL;
 
 
 entity RegisterFile is
@@ -48,4 +50,3 @@ begin
 	 
 
 end syn;
-
