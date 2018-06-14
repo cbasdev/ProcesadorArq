@@ -56,7 +56,7 @@ begin
 				aluresult <= crs1 AND CRS2mux ;
 			when "010101" => -- andncc
 				aluresult <= NOT(crs1 AND CRS2mux);
-			when "010010" => -- orcc
+			when "010010" => --- orcc
 				aluresult <= crs1 OR CRS2mux;
 			when "010110" => -- orncc
 				aluresult <= NOT(crs1 OR CRS2mux);
