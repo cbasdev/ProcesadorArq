@@ -1,6 +1,6 @@
 # ProcesadorArq
 
-Construcción de un procesador con arquitectura Sparc V8
+🚀Construcción de un procesador con arquitectura Sparc V8
 
 Presentado por:
 
