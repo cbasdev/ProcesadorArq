@@ -1,6 +1,6 @@
 # ProcesadorArq
 
-🚀Construcción de un procesador con arquitectura Sparc V8
+🚀 Construction of a processor based on SparcV8 architecture
 
 Presentado por:
 
@@ -8,14 +8,14 @@ Presentado por:
 
 [Leonardo Castrillón Giraldo](https://github.com/deltaintegrate)
 
-### Modulo 1:
-Contiene instrucciones basicas logicas y aritmeticas
+### Module 1:
+It contains basic logical and arithmetic instructions
 
-### Modulo 2:
-Se adicionan los modulos multiventana soportando instrucciones que generan conditional code, load y store
+### Module 2:
+Multi-window modules are added supporting instructions that generate conditional code, load and store
 
-### Modulo 3:
-Implementacion del datamemory para lectura y escritura adeemas de saltos con funciones call, branch y jump and link
+### Module 3:
+Implementation of datamemory for reading and writing in addition to jumps with call, branch and jump and link functions
 
-### Modulo 4:
-Procesador segmentado final, teoricamente 5 veces mas rapido que el primero.
+### Module 4:
+Final segmented processor, theoretically 5 times faster than the first.
